@@ -1,8 +1,8 @@
 # Game - React
 ## 📖 Descrição 
-<p>Um jogo 2D que foi desenvolvido em typescript e React. </p>
+<p>O projeto é um jogo em 2D utilizando Typescript e React para desenvolver uma fase simples.</p>
 
-LIVE DEMO -> Em desenvolvimento
+LIVE DEMO > Em desenvolvimento
 
 ##
 
