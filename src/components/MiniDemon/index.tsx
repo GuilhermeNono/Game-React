@@ -4,15 +4,19 @@ import "./style.css";
 import { Edirection, HEAD_OFFSET, TILE_SIZE } from "../../settings/constants";
 import useEnemyMovement from "../../Hooks/useEnemyMovement";
 
-const MiniDemon: React.FC = () => {
+interface IProps {
+  initialPosition: {x: number; y: number}
+}
 
-  const {direction, position} = useEnemyMovement({x:9, y:5})
+const MiniDemon = (props:IProps) => {
+
+  const {direction, position} = useEnemyMovement(props.initialPosition)
 
   return (
     <div
       style={{
         position: "absolute",
-        bottom:TILE_SIZE*position.y ,
+        top:TILE_SIZE*position.y ,
         left:TILE_SIZE*position.x ,
         width: TILE_SIZE,
         height: TILE_SIZE + HEAD_OFFSET,

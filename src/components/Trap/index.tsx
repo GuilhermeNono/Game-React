@@ -8,7 +8,7 @@ const Trap: React.FC = () => {
     <div
       style={{
         position: "absolute",
-        bottom:48*12 ,
+        top:48*12 ,
         left:48 * 9 ,
         width: TILE_SIZE,
         height: 100,

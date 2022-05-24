@@ -14,7 +14,8 @@ const Board: React.FC = () => {
       <Trap />
       <Chest />
       <Demon />
-      <MiniDemon />
+      <MiniDemon initialPosition={{x: 5, y: 10}}/>
+      <MiniDemon initialPosition={{x: 2, y: 9}}/>
       <Hero />
       <img
         src="./assets/tileset.gif"

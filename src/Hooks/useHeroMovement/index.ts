@@ -16,6 +16,10 @@ function useHeroMovement(initialState) {
 
     const direction = event.key as Edirection
 
+    if(direction.indexOf("Arrow") === -1) {
+      return;
+    }
+
     const nextMovement = handleNextPosition(direction, positionState)
     updateDirection(direction)
     updatePositionState(nextMovement)

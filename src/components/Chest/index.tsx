@@ -8,7 +8,7 @@ const Chest: React.FC = () => {
     <div
       style={{
         position: "absolute",
-        bottom:48*8 ,
+        top:48*8 ,
         left:48 ,
         width: TILE_SIZE,
         height: 100,
