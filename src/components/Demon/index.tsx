@@ -3,9 +3,14 @@ import "./style.css";
 
 import { TILE_SIZE, DEMON_TILE_SIZE, Edirection} from "../../settings/constants";
 import useEnemyMovement from "../../Hooks/useEnemyMovement";
-const Demon: React.FC = () => {
 
-  const {direction, position} = useEnemyMovement({x:5, y:5})
+interface IProps {
+  initialPosition: {x:number; y:number}
+}
+
+const Demon = (props:IProps) => {
+
+  const {direction, position} = useEnemyMovement(props.initialPosition)
 
   return (
     <div

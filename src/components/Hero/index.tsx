@@ -4,19 +4,18 @@ import "./style.css";
 import { TILE_SIZE, HEAD_OFFSET, Edirection } from "../../settings/constants";
 import useHeroMovement from "../../Hooks/useHeroMovement";
 
-const initialState = {
-  x: 5,
-  y: 9,
-};
+interface IProps {
+  initialPosition: {x:number; y:number}
+}
 
-const Hero: React.FC = () => {
+const Hero = (props:IProps) => {
   
-  const {direction, position} = useHeroMovement(initialState);
+  const {direction, position} = useHeroMovement(props.initialPosition);
 
     return(<div
       style={{
         position: "absolute",
-        top: TILE_SIZE * position.y,
+        top: TILE_SIZE * position.y - HEAD_OFFSET,
         left: TILE_SIZE * position.x,
         width: TILE_SIZE,
         height: TILE_SIZE + HEAD_OFFSET,

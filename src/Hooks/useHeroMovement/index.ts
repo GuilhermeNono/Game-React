@@ -1,6 +1,6 @@
 import useEventListener from "@use-it/event-listener";
 import React from "react";
-import { handleNextPosition } from "../../context/canvas/helpers";
+import { checkValidMovement, handleNextPosition } from "../../context/canvas/helpers";
 import { Edirection } from "../../settings/constants";
 function useHeroMovement(initialState) {
 
@@ -19,10 +19,14 @@ function useHeroMovement(initialState) {
     if(direction.indexOf("Arrow") === -1) {
       return;
     }
-
     const nextMovement = handleNextPosition(direction, positionState)
-    updateDirection(direction)
-    updatePositionState(nextMovement)
+
+    const checkCanvas = checkValidMovement(nextMovement)
+
+    if(checkCanvas) {
+      updateDirection(direction)
+      updatePositionState(nextMovement)
+    }
   });
 
   return {

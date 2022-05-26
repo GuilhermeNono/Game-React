@@ -3,13 +3,17 @@ import "./style.css";
 
 import { TILE_SIZE } from "../../settings/constants";
 
-const Chest: React.FC = () => {
+interface IProps {
+  initialPosition: {x:number; y:number}
+}
+
+const Chest= (props:IProps) => {
   return (
     <div
       style={{
         position: "absolute",
-        top:48*8 ,
-        left:48 ,
+        top:TILE_SIZE* props.initialPosition.y,
+        left:TILE_SIZE* props.initialPosition.x,
         width: TILE_SIZE,
         height: 100,
         backgroundImage: "url(./assets/CHEST.png)",

@@ -3,13 +3,17 @@ import "./style.css";
 
 import { TILE_SIZE } from "../../settings/constants";
 
-const Trap: React.FC = () => {
+interface IProps {
+  initialPosition: {x:number; y:number}
+}
+
+const Trap = (props:IProps) => {
   return (
     <div
       style={{
         position: "absolute",
-        top:48*12 ,
-        left:48 * 9 ,
+        top:TILE_SIZE* props.initialPosition.y ,
+        left:TILE_SIZE * props.initialPosition.x ,
         width: TILE_SIZE,
         height: 100,
         backgroundImage: "url(./assets/TRAP.png)",

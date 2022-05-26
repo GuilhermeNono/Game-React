@@ -15,7 +15,9 @@ function getCanvasMap() {
       const position = {x: x, y: y}
       const text = canvas[y][x] || canvasYX
 
-      tileArray.push(<Tile position={position} text={text}/>)
+      const key = `${x}-${y}`;
+
+      tileArray.push(<Tile key={key} position={position} text={text}/>)
     }
   }
 
