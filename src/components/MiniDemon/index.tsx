@@ -16,7 +16,7 @@ const MiniDemon = (props:IProps) => {
     <div
       style={{
         position: "absolute",
-        top:TILE_SIZE*position.y ,
+        top:TILE_SIZE*position.y - HEAD_OFFSET,
         left:TILE_SIZE*position.x ,
         width: TILE_SIZE,
         height: TILE_SIZE + HEAD_OFFSET,

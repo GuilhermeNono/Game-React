@@ -22,7 +22,7 @@ const Tile = (props: IProps) => {
         return "chartreuse";
       case ECanvas.DEMON:
       case ECanvas.MINI_DEMON:
-        return "chartreuse";
+        return "red";
       case ECanvas.CHEST:
         return "cyan";
     }
